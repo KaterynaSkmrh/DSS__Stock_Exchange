@@ -1,0 +1,25 @@
+﻿<Window x:Class="DSS__Stock_Exchange.TimeSeriesShowWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Перегляд і редагування рядів" Icon="Source_Image\kcmdf.png" Height="370" Width="400" ResizeMode="NoResize">
+    <Grid>
+        <ToolBar HorizontalAlignment="Stretch" VerticalAlignment="Top">
+            <Button Click="Button_Click_Save_TimeSeries" ToolTip="Зберегти">
+                <Image Source="save.jpg" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30"/>             
+            </Button>
+            <Button Click="Button_Click_Rename_TimeSeries" ToolTip="Зміна назви">
+                <Image Source="rename.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30"/>
+            </Button>
+            <Button Click="Button_Click_Manipulate_TimeSeries" ToolTip="Перетворення рядів">
+                <Image Source="Source_image\kspread_ksp.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30"/>
+            </Button>
+            <Button  ToolTip="Операції над рядами" Click="Button_Click_Operations_TimeSeries">
+                <Image Source="Source_image\openofficeorg-20-math.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30"/>
+            </Button>
+            <Button Click="Button_Click_Show_TimeSeries" ToolTip="Графік">
+                <Image Source="graph.png" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30"/>
+            </Button>
+        </ToolBar>
+        <DataGrid Name="TimeSeries" ItemsSource="{Binding}" AutoGenerateColumns="True" ColumnWidth="*" HorizontalAlignment="Stretch" Margin="10,46,10,10" VerticalAlignment="Stretch"/>
+    </Grid>
+</Window>

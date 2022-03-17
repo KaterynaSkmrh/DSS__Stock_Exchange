@@ -1,0 +1,13 @@
+﻿<Window x:Class="DSS__Stock_Exchange.ShowForecastWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:zd="clr-namespace:ZedGraph;assembly=ZedGraph"
+        Title="Прогноз для ряду " Icon="Source_Image\swf.png" Height="355.224" Width="423.88" ResizeMode="NoResize">
+    <Grid>
+        <WindowsFormsHost Name="host" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,10,130,0">
+            <zd:ZedGraphControl Name="ZGC"/>
+        </WindowsFormsHost>
+        <TextBlock Name="TextBlock_MAPE" HorizontalAlignment="Left" Margin="293,10,0,0" TextWrapping="Wrap" Text="MAPE: " VerticalAlignment="Top" Height="50" Width="115"/>
+        <TextBlock Name="TextBlock_MAE" HorizontalAlignment="Left" Margin="293,65,0,0" TextWrapping="Wrap" Text="MAE: " VerticalAlignment="Top" Height="65" Width="115"/>
+    </Grid>
+</Window>

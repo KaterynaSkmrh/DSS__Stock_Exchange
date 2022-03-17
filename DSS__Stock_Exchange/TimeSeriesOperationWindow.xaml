@@ -1,0 +1,23 @@
+﻿<Window x:Class="DSS__Stock_Exchange.TimeSeriesOperationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Операції з часовими рядами" Icon="Source_Image\edit2.png" Height="326.463" Width="313.433" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,2">
+        <Label Content="Перший ряд:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="ComboBox_Row1" HorizontalAlignment="Left" Height="23" Margin="96,13,0,0" ItemsSource="{Binding}" VerticalAlignment="Top" Width="188"/>
+        <Label Content="Другий ряд:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="ComboBox_Row2" HorizontalAlignment="Left" Height="23" Margin="96,41,0,0" ItemsSource="{Binding}" VerticalAlignment="Top" Width="188"/>
+        <Label Content="Результуючий ряд:" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="ComboBox_ResultRow" HorizontalAlignment="Left" Height="23" Margin="128,69,0,0" ItemsSource="{Binding}" VerticalAlignment="Top" Width="156"/>
+
+        <Button Content="Поелементна сума двох рядів" HorizontalAlignment="Left" Margin="10,113,0,0" VerticalAlignment="Top" Width="239" Click="Button_Click"/>
+        <Button Content="Поелементна різниця двох рядів" HorizontalAlignment="Left" Margin="10,138,0,0" VerticalAlignment="Top" Width="239" Click="Button_Click_1"/>
+        <Button Content="Домножити перший ряд на" HorizontalAlignment="Left" Margin="10,164,0,0" VerticalAlignment="Top" Width="175" Click="Button_Click_2"/>
+        <TextBox Name="TextBox_Osnova" Text="10" HorizontalAlignment="Left" Height="23" Margin="190,164,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" KeyDown="TextBox_Osnova_KeyDown"/>
+        <Button Content="Поелементний добуток двох рядів" HorizontalAlignment="Left" Margin="10,192,0,0" VerticalAlignment="Top" Width="239" Click="Button_Click_3"/>
+        <Button Content="Поелементне ділення двох рядів" HorizontalAlignment="Left" Margin="10,217,0,0" VerticalAlignment="Top" Width="239" Click="Button_Click_4"/>
+        <Button Content="Поелементне обернення першого ряду" HorizontalAlignment="Left" Margin="10,242,0,-3" VerticalAlignment="Top" Width="239" Click="Button_Click_5"/>
+        <Button Content="Піднести перший ряд в степінь" HorizontalAlignment="Left" Margin="10,267,0,0" VerticalAlignment="Top" Width="175" Click="Button_Click_6"/>
+        <TextBox x:Name="TextBox_Stepen" Text="2" HorizontalAlignment="Left" Height="23" Margin="190,267,0,-1" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" KeyDown="TextBox_Osnova_KeyDown"/>
+    </Grid>
+</Window>

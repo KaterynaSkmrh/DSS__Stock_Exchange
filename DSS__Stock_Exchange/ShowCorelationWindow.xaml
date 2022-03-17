@@ -1,0 +1,12 @@
+﻿<Window x:Class="DSS__Stock_Exchange.ShowCorelationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Кореляція між вибраними рядами" Height="355.224" Width="400" Icon="Source_Image\kchart_chrt.png">
+    <Grid>
+        <Menu VerticalAlignment="Top" HorizontalAlignment="Stretch">
+            <MenuItem Header="Матриця коваріацій" Click="MenuItem_Click"/>
+            <MenuItem Header="Матриця кореляцій" Click="MenuItem_Click_1"/>
+        </Menu>
+        <DataGrid Name="Variations" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="288" IsReadOnly="True" ItemsSource="{Binding}" AutoGenerateColumns="True"/>
+    </Grid>
+</Window>

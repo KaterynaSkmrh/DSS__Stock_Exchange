@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D947496C-B2FE-4D6A-B5E3-2D8A40C9CCD7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DSS__Stock_Exchange</RootNamespace>
+    <AssemblyName>DSS__Stock_Exchange</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="ZedGraph">
+      <HintPath>..\..\..\леха\Exponential\Exponential\bin\Debug\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AddMovingAverageWindow.xaml.cs">
+      <DependentUpon>AddMovingAverageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ARIMAmodel.cs" />
+    <Compile Include="ModelWindow.xaml.cs">
+      <DependentUpon>ModelWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AssessmentMethod\AssessmentMethodInterface.cs" />
+    <Compile Include="AssessmentMethod\Library\alglibinternal.cs" />
+    <Compile Include="AssessmentMethod\Library\alglibmisc.cs" />
+    <Compile Include="AssessmentMethod\Library\alglib_info.cs" />
+    <Compile Include="AssessmentMethod\Library\ap.cs" />
+    <Compile Include="AssessmentMethod\Library\dataanalysis.cs" />
+    <Compile Include="AssessmentMethod\Library\diffequations.cs" />
+    <Compile Include="AssessmentMethod\Library\fasttransforms.cs" />
+    <Compile Include="AssessmentMethod\Library\integration.cs" />
+    <Compile Include="AssessmentMethod\Library\interpolation.cs" />
+    <Compile Include="AssessmentMethod\Library\linalg.cs" />
+    <Compile Include="AssessmentMethod\Library\optimization.cs" />
+    <Compile Include="AssessmentMethod\Library\solvers.cs" />
+    <Compile Include="AssessmentMethod\Library\specialfunctions.cs" />
+    <Compile Include="AssessmentMethod\Library\statistics.cs" />
+    <Compile Include="AssessmentMethod\Matrix.cs" />
+    <Compile Include="AssessmentMethod\MLS.cs" />
+    <Compile Include="AssessmentMethod\RMLS.cs" />
+    <Compile Include="ShowGraphicTimeSeriesWindow.xaml.cs">
+      <DependentUpon>ShowGraphicTimeSeriesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InputLagWindow.xaml.cs">
+      <DependentUpon>InputLagWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InputSeriesNameWindow.xaml.cs">
+      <DependentUpon>InputSeriesNameWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InputSeriesSizeWindow.xaml.cs">
+      <DependentUpon>InputSeriesSizeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AbstractModel.cs" />
+    <Compile Include="Models\ARMAmodel.cs" />
+    <Compile Include="ModelType.cs" />
+    <Compile Include="MovingAverage\ExponentialMovingAverageDecrease.cs" />
+    <Compile Include="MovingAverage\ExponentialMovingAverageIncrease.cs" />
+    <Compile Include="MovingAverage\MovingAverageInterface.cs" />
+    <Compile Include="MovingAverage\SimpleMovingAverage.cs" />
+    <Compile Include="MyExcepion.cs" />
+    <Compile Include="RenameSeriesWindow.xaml.cs">
+      <DependentUpon>RenameSeriesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShowAFsWindow.xaml.cs">
+      <DependentUpon>ShowAFsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShowCorelationWindow.xaml.cs">
+      <DependentUpon>ShowCorelationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShowForecastWindow.xaml.cs">
+      <DependentUpon>ShowForecastWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShowModelWindow.xaml.cs">
+      <DependentUpon>ShowModelWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShowStatisticWindow.xaml.cs">
+      <DependentUpon>ShowStatisticWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics.cs" />
+    <Compile Include="TimeSeriesClass.cs" />
+    <Compile Include="TimeSeriesManipulateWindow.xaml.cs">
+      <DependentUpon>TimeSeriesManipulateWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TimeSeriesOperationWindow.xaml.cs">
+      <DependentUpon>TimeSeriesOperationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TimeSeriesShowWindow.xaml.cs">
+      <DependentUpon>TimeSeriesShowWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="White_Noise.cs" />
+    <Page Include="AddMovingAverageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ModelWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShowGraphicTimeSeriesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InputLagWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InputSeriesNameWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InputSeriesSizeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="RenameSeriesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShowAFsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShowCorelationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShowForecastWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShowModelWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShowStatisticWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TimeSeriesManipulateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TimeSeriesOperationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TimeSeriesShowWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Source_Image\kchart_chrt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Source_Image\hdd_unmount.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Source_Image\kspread_ksp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Source_Image\advancedsettings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Source_Image\kcmdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Source_Image\swf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Source_Image\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Source_Image\edit2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Source_Image\openofficeorg-20-math.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Source_Image\cache.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Source_Image\katomic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="save.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="rename.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="graph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="edit2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

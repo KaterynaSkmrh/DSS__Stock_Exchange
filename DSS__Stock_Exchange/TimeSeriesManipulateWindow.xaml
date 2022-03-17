@@ -1,0 +1,15 @@
+﻿<Window x:Class="DSS__Stock_Exchange.TimeSeriesManipulateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Перетворення часового ряду" Icon="Source_Image\edit2.png" Height="232.836" Width="300" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,8">
+        <Label Content="Часовий ряд:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="ComboBox_RowName" HorizontalAlignment="Left" Height="23" Margin="10,36,0,0" ItemsSource="{Binding}" VerticalAlignment="Top" Width="175"/>
+        <Button Content="Логарифмувати з натуральною основою" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Width="239" Click="Button_Click"/>
+        <Button Content="Логарифмувати з основою" HorizontalAlignment="Left" Margin="10,89,0,0" VerticalAlignment="Top" Width="175" Click="Button_Click_1"/>
+        <TextBox Name="Osnova" Text="10" HorizontalAlignment="Left" Height="23" Margin="190,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" KeyDown="Osnova_KeyDown"/>
+        <Button Content="Нормувати від 0 до 1" HorizontalAlignment="Left" Margin="10,117,0,0" VerticalAlignment="Top" Width="239" Click="Button_Click_2"/>
+        <Button Content="Нормувати від -1 до 1" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" Width="239" Click="Button_Click_3"/>
+        <Button Content="Взяти різницю" HorizontalAlignment="Left" Margin="10,166,0,0" VerticalAlignment="Top" Width="239" Click="Button_Click_4" />
+    </Grid>
+</Window>

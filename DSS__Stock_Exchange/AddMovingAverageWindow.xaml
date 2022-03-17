@@ -1,0 +1,13 @@
+﻿<Window x:Class="DSS__Stock_Exchange.AddMovingAverageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AddMovingAverageWindow" Height="185.075" Width="300" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,3">
+        <Label Content="Розмір:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBox_Size_Window" Text="5" HorizontalAlignment="Left" Height="23" Margin="100,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="37" KeyDown="TextBox_Count_KeyDown"/>
+        <Button  Content="Підтвердити" Margin="10,108,158,10" Click="Button_Click_1" RenderTransformOrigin="0.572,-0.77"  />
+        <Button  Content="Скасувати" Margin="151,108,10,10" Click="Button_Click" RenderTransformOrigin="0.371,-0.528"  />         
+        <TextBox Name="TextBox_NewName" Text="Ковзне середнє для " HorizontalAlignment="Stretch" Height="38" Margin="10,65,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label Content="Назва ряду для ковзного середнього:" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Height="38" Width="221"/>
+    </Grid>
+</Window>

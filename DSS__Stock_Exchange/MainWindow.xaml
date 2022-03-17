@@ -1,0 +1,35 @@
+﻿<Window x:Class="DSS__Stock_Exchange.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="СППР для моделювання і прогнозування процесів" Icon="icon.jpg" Height="452.985" Width="487.236" ResizeMode="CanMinimize" Closed="Window_Closed" Background="White" WindowStyle="ThreeDBorderWindow">
+    <Grid>
+        <Menu VerticalAlignment="Top" HorizontalAlignment="Stretch" Background="{x:Null}">
+            <MenuItem Header="Файл" Background="Transparent">
+                <MenuItem Header="Операції з рядами">
+                    <MenuItem Header="Завантажити ряд" Click="MenuItem_Click_Load_TimeSeries" />
+                    <MenuItem Header="Додати порожній ряд" Click="MenuItem_Click_Add_Empty_TimeSeries" />
+                    <MenuItem Header="Копіювати" Click="MenuItem_Click_Copy_TimeSeries" />
+                    <MenuItem Header="Видалити" Click="MenuItem_Click_Delete_TimeSeries" />
+                    <MenuItem Header="Редагувати" Click="MenuItem_Click_Show_TimeSeries" />
+                    <MenuItem Header="Зберегти" Click="MenuItem_Click_Save_TimeSeries" />
+                </MenuItem>
+                <MenuItem Header="Ковзне середнє">
+                    <MenuItem Header="Побудувати просте ковзнє середнє" Click="MenuItem_Click_Build_MovingAverage" />
+                    <MenuItem Header="Побудувати експоненційне ковзнє середнє (з акцентом на остані виміри)" Click="MenuItem_Click_Build_MovingAverage" />
+                    <MenuItem Header="Побудувати експоненційне ковзнє середнє (з акцентом на старі виміри)" Click="MenuItem_Click_Build_MovingAverage" />
+                </MenuItem>
+                <MenuItem Header="Вихід" Click="MenuItem_Click_Exit" />
+            </MenuItem>
+            <MenuItem Header="Аналіз">
+                <MenuItem Header="Статистичні показники" Click="MenuItem_Click_Show_Statistic" />
+                <MenuItem Header="Кореляція" Click="MenuItem_Click_Show_Correlation" />
+                <MenuItem Header="АКФ / ЧАКФ" Click="MenuItem_Click_Show_CorrelationFunctions"  />
+            </MenuItem>
+            <MenuItem Header="Побудувати модель">
+                <MenuItem Header="Модель АРКС" Click="MenuItem_Click_Build_Model"/>
+                <MenuItem Header="Модель АРІКС" Click="MenuItem_Click_Build_Model"/>
+            </MenuItem>
+        </Menu>
+        <DataGrid Name="TimeSeries" ItemsSource="{Binding}" AutoGenerateColumns="True" IsReadOnly="True" ColumnWidth="*" HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top" Height="314" Width="455"/>
+    </Grid>
+</Window>

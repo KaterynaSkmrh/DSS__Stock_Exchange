@@ -1,0 +1,16 @@
+﻿<Window x:Class="DSS__Stock_Exchange.ShowStatisticWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Статистичні показники для ряду " Height="164.18" Width="365.672" ResizeMode="NoResize" Icon="Source_Image\kchart_chrt.png">
+    <Grid Margin="0,0,0,-1">
+        <Label Content="Математичне середнє:" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Дисперсія:" HorizontalAlignment="Left" Margin="0,41,0,0" VerticalAlignment="Top"/>
+        <Label Content="Коефіцієнт асиметрії:" HorizontalAlignment="Left" Margin="0,67,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ексцес:" HorizontalAlignment="Left" Margin="0,93,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="154,15,0,0" TextWrapping="Wrap" Name="TextBlock_Average" VerticalAlignment="Top" RenderTransformOrigin="0.349,1.859"/>
+        <TextBlock HorizontalAlignment="Left" Margin="154,46,0,0" TextWrapping="Wrap" Name="TextBlock_Variancz" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="154,72,0,0" TextWrapping="Wrap" Name="TextBlock_Skewness" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="154,97,0,0" TextWrapping="Wrap" Name="TextBlock_Kutosis" VerticalAlignment="Top" RenderTransformOrigin="0.561,3.243"/>
+
+    </Grid>
+</Window>

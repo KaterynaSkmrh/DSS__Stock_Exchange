@@ -1,0 +1,12 @@
+﻿<Window x:Class="DSS__Stock_Exchange.InputSeriesNameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Введіть назву ряду" Icon="Source_Image\add.png" Height="140.665" Width="301.493" ResizeMode="NoResize">
+    <Grid VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="107">
+        <Button  Content="Підтвердити" Margin="10,57,158,21" Click="Button_Click_1"  />
+        <Button  Content="Скасувати" Margin="160,57,10,21" Click="Button_Click"  />
+        <TextBox Name="Input" HorizontalAlignment="Stretch" Height="26" Margin="100,14,63,0" TextWrapping="Wrap" Text="Новий ряд" VerticalAlignment="Top"/>
+        <Label Content="Назва ряду :" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="38" Width="85"/>
+    </Grid>
+
+</Window>

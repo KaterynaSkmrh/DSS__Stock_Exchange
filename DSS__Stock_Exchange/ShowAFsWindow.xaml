@@ -1,0 +1,18 @@
+﻿<Window x:Class="DSS__Stock_Exchange.ShowAFsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:zd="clr-namespace:ZedGraph;assembly=ZedGraph"
+        Title="Автокореляційні функції для ряду " Icon="Source_Image\swf.png" Height="355.224" Width="583.581" ResizeMode="NoResize">
+    <Grid>
+        <Menu VerticalAlignment="Top" HorizontalAlignment="Stretch">
+            <MenuItem Header="АКФ" Click="MenuItem_ACF_Click"/>
+            <MenuItem Header="ЧАКФ" Click="MenuItem_PACF_Click"/>
+        </Menu>
+        <WindowsFormsHost Name="host" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="0,51,0,0" Width="367">
+            <zd:ZedGraphControl Name="ZGC"/>
+        </WindowsFormsHost>
+        <Label Content="Поріг :" HorizontalAlignment="Left" Margin="0,20,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.146,0.01"/>
+        <TextBox Name="textBox_porig" HorizontalAlignment="Left" Height="23" Margin="52,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyDown="textBox_porig_KeyDown"/>
+        <DataGrid Name="DataGrid" AutoGenerateColumns="True" ColumnWidth="*" IsReadOnly="True" ItemsSource="{Binding}" HorizontalAlignment="Left" Margin="372,51,0,0" VerticalAlignment="Top" Height="265" Width="196"/>
+    </Grid>
+</Window>
